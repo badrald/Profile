@@ -1,0 +1,816 @@
+/* النتسيقات العامة للموقع و الطابع الاساسي */
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    outline: none;
+    direction: rtl;
+    --main-Color: #172c2d;
+    --secondary-Color: #f7f7f7;
+    --active-color: #43b486;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* نهاية التنسيقات العامة */
+
+
+
+/* تنسيق الخاص بالناف بار  */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.logo h1 {
+    color: var(--secondary-Color);
+    margin-right: -33px;
+    margin-top: 8px;
+}
+
+.logo h1:hover {
+    color: var(--active-color);
+}
+
+
+.navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--secondary-Color);
+}
+
+.navbar-toggler-icon {
+    background-color: var(--secondary-Color);
+    width: 30px;
+    height: 3px;
+    display: block;
+    position: relative;
+}
+
+.navbar-toggler-icon:before,
+.navbar-toggler-icon:after {
+    content: '';
+    background-color: var(--secondary-Color);
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon:before {
+    top: -10px;
+}
+
+.navbar-toggler-icon:after {
+    bottom: -10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.links li {
+    padding: 15px;
+}
+
+.links li a {
+    color: var(--secondary-Color);
+}
+
+.links li a:hover {
+    color: var(--active-color);
+}
+
+.links li a:active {
+    color: var(--active-color);
+}
+
+/* نهاية التنسيق الخاص بالناف بار  */
+
+
+
+
+
+/* بداية التنسيق الخاص بالهيدر */
+
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -10;
+}
+
+.header {
+    position: relative;
+    background-image: url("../images/header_background.jpg");
+    background-size: cover;
+    height: 100vh;
+    z-index: 1;
+
+}
+
+.navbar .container::after {
+    content: "";
+    position: absolute;
+    width: 65%;
+    height: 1px;
+    background-color: white;
+    top: 85px;
+    left: 18%;
+}
+
+
+
+.header .slider {
+    position: relative;
+}
+
+.header .slider .container {
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.header .slider .container .text {
+    width: 50%;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+}
+
+.header .slider .container .text h2 {
+    color: white;
+}
+
+.header .slider .container .circular-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .slider .container .circular-image img {
+    width: 500px;
+    border-radius: 50%;
+}
+
+/* نهاية تنسيق الهيدر */
+
+/* بداية تنسيق  معلومات عني  */
+
+.about {
+    background-image: url("../images/about_me_background.png");
+    background-size: 100% 100%
+}
+
+.about h2 {
+    text-transform: none;
+    margin-left: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.about .info {
+    padding-right: 50px;
+}
+
+.about .info p {
+    margin: 20px 0;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.about .info a:first-of-type {
+    background-color: #fff;
+    margin-right: 10px
+}
+
+.about .info a:first-of-type:hover {
+    background-color: #000;
+    color: #fff
+}
+
+.about-details {
+    margin-bottom: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-detail {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.about-detail:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skills-list,
+.experience-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.skills-list {
+    flex-wrap: wrap;
+}
+
+.skills-list li,
+.experience-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.skills-list li i,
+.experience-list li i {
+    margin-left: 10px;
+    color: var(--main-Color);
+}
+
+.about-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.counters {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.counter {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.counter:hover {
+    transform: translateY(-10px);
+}
+
+.counter h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.counter .count {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+    transition: color 0.3s ease-in-out;
+}
+
+.counter .count[data-target] {
+    animation: countAnimation 2s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes countAnimation {
+    from {
+        color: #ff8a00;
+    }
+
+    to {
+        color: #ffffff;
+    }
+}
+
+/* نهاية تنسيق قسم معلومات عني */
+
+
+
+/* بداية تنسيق قسم اهم المشاريع */
+.portfolio .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 48%;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+    text-align: right;
+}
+
+.project-info h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1em;
+    color: #666;
+}
+
+
+/* نهاية تنسيق قسم أهم المشاريع */
+
+/* بداية تنسيق قسم الاتصال */
+.contact {
+    background-image: url("../images/contact-bg.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-Color);
+    padding: 80px 0;
+    display: flex;
+}
+
+.contact hr {
+    margin-bottom: 50px;
+    background-color: var(--secondary-Color);
+    width: 50px;
+    height: 2px;
+    border: none;
+}
+
+.main-contact {
+    display: flex;
+}
+
+.main-contact .contact-info {
+    width: 30%;
+
+}
+
+.main-contact form {
+    width: 65%;
+}
+
+
+
+.contact .contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact .contact-info li {
+    margin-bottom: 20px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.contact .contact-info li:hover {
+    transform: translateX(5px);
+}
+
+.contact .contact-info i {
+    margin-right: 10px;
+    font-size: 20px;
+    width: 25px;
+    text-align: center;
+}
+
+.contact input,
+.contact textarea {
+    background-color: rgba(250, 250, 250, 0.1);
+    border: 1px solid transparent;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    color: var(--secondary-Color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    background-color: rgba(250, 250, 250, 0.2);
+    border-color: var(--secondary-Color);
+    outline: none;
+}
+
+.contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact .button {
+    background-color: var(--active-color);
+    color: var(--secondary-Color);
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact .button:hover {
+    background-color: var(--active-color);
+    color: var(--secondary-Color);
+}
+
+/* النتسيقات الخاصة بالملائمة */
+@media (max-width: 768px) {
+    .main-contact {
+        flex-direction: column;
+    }
+
+    .main-contact .contact-info,
+    .main-contact form {
+        width: 100%;
+
+    }
+
+    .main-contact .contact-info {
+        margin-bottom: 40px;
+        justify-content: center;
+    }
+
+    .contact .contact-info li {
+        font-size: 18px;
+    }
+}
+
+/* نهاية تنسيق قسم الاتصال   */
+
+
+
+/* بداية تنسيق الفوتر  */
+
+.footer {
+    direction: rtl;
+    padding: 30px 0;
+    background-color: #202628;
+}
+
+.footer p,
+.footer .socail {
+    width: 50%;
+}
+
+/* تنسيق الفوتر للشاشات العادية */
+.footer p {
+    text-align: right;
+    float: right;
+    color: var(--secondary-Color);
+    font-size: 16px;
+}
+
+.footer .socail {
+    text-align: left;
+    float: left;
+}
+
+.footer .socail i {
+    margin: 5px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 50%;
+    color: #202628;
+    background-color: var(--active-color);
+}
+
+/* تنسيق الفوتر للشاشات الصغيرة */
+@media (max-width: 768px) {
+
+    .footer p,
+    .footer .socail {
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+}
+
+/* نهاية تنسيق الفوتر  */
+
+/* بعض الكلاسات التي استخدمتها في التصميم */
+
+.clear {
+    clear: both
+}
+
+.button {
+    background-color: var(--secondary-Color);
+    display: inline-block;
+    border-radius: 15px;
+    padding: 15px 30px;
+    font-size: 13px;
+    margin-left: 3px;
+    color: var(--main-Color);
+    font-size: 17px;
+
+}
+
+.button:hover {
+    background-color: var(--active-color);
+}
+
+.fl-left {
+    float: left
+}
+
+h2 {
+    text-transform: uppercase;
+    margin: 10px;
+    color: #333
+}
+
+hr {
+    width: 50px;
+    height: 3px;
+    border: none;
+    background-color: #333;
+}
+
+p {
+    font-size: 13px;
+    line-height: 1.7
+}
+
+.main-padding {
+    padding: 100px 0
+}
+
+.text-center {
+    text-align: center
+}
+
+.color-white {
+    color: #fff
+}
+
+.color-black {
+    color: #333
+}
+
+/* نهاية الكلاسات العامة المستخدمة في التصميم  */
+
+
+/* النتسيقات الخاصة بالملائمة */
+@media only screen and (max-width: 1270px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header {
+        height: 80vh;
+        /* تخفيض ارتفاع الهيدر */
+    }
+
+    .header .navbar .container::after {
+        top: 90px;
+        /* تعديل موضع الخط */
+    }
+
+    .header .slider .container {
+        flex-direction: column;
+        /* جعل العناصر تتكدس عموديًا */
+        padding-top: 100px;
+    }
+
+    .header .slider .container .text,
+    .header .slider .container .circular-image {
+        width: 100%;
+        /* تكبير العرض ليملأ الشاشة */
+        text-align: center;
+        /* ضبط النصوص إلى المنتصف */
+    }
+
+    .header .slider .container .circular-image img {
+        width: 300px;
+        /* تقليل حجم الصورة */
+    }
+
+    .about .info {
+        padding-right: 20px;
+    }
+
+    .portfolio .gallery {
+        flex-direction: column;
+        /* تغيير الاتجاه إلى عمودي */
+    }
+
+    .project-card {
+        width: 100%;
+        /* تكبير العرض ليملأ الشاشة */
+    }
+
+    .contact .map,
+    .contact form {
+        width: 100%;
+        /* تكبير العرض ليملأ الشاشة */
+    }
+
+    .contact input:first-of-type,
+    .contact input:nth-of-type(2) {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+        /* إضافة مسافة بين الحقول */
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+    .footer p,
+    .footer .socail {
+        width: 100%;
+        /* تكبير العرض ليملأ الشاشة */
+        text-align: center;
+    }
+
+
+}
+
+/* للشاشات الأصغر من 768px */
+@media only screen and (max-width: 768px) {
+    .header {
+        height: 70vh;
+        /* تخفيض إضافي في ارتفاع الهيدر */
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        display: block;
+        left: 120px;
+        top: 40px;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: right;
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .links.active {
+        display: flex;
+        /* Ensure the links are shown */
+    }
+
+    .links.active>.header {
+        height: 110vh;
+    }
+
+    .links li {
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .navbar-toggler.active+.links {
+        display: flex;
+    }
+
+    .header .slider .container {
+        padding-top: 30px;
+    }
+
+    .header .slider .container .circular-image img {
+        width: 200px;
+        /* تخفيض حجم الصورة */
+    }
+
+    .features .feat {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .about h2 {
+        font-size: 30px;
+        /* تخفيض حجم العنوان */
+    }
+
+    .about .info p {
+        font-size: 18px;
+        /* تخفيض حجم النص */
+    }
+
+
+    .counter h3 {
+        font-size: 1em;
+        /* تخفيض حجم النص */
+    }
+
+    .counter .count {
+        font-size: 2em;
+        /* تخفيض حجم الرقم */
+    }
+
+
+}
