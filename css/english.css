@@ -1,0 +1,29 @@
+* {
+    direction: ltr !important;
+}
+
+
+.skills-list li i,
+.experience-list li i {
+    margin-right: 10px;
+    color: var(--main-Color);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .navbar-toggler {
+        position: absolute;
+        display: block;
+        right: -120px;
+        top: 40px;
+    }
+
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        padding-left: 13px;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
